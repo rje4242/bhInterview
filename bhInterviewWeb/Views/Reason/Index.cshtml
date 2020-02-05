@@ -1,0 +1,27 @@
+﻿@model IEnumerable<bhInterviewWeb.Models.Reason>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>bhInterview</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                My reasons for applying
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReasonText)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
